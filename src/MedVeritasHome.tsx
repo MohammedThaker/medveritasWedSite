@@ -543,13 +543,13 @@ const STATS: StatItem[] = [
   { value: "30+", label: "National & Local Partners", Icon: IconAward  },
 ];
 
-const CATEGORIES: string[] = ["All Projects", "Research & Studies", "Training & Capacity", "Health Systems", "Emergency Response"];
+const CATEGORIES: string[] = ["All Projects", "Monitoring", "Training & Capacity", "Health Systems", "Emergency Response"];
 
 const PROJECTS: ProjectItem[] = [
-  { id:1, title:"Health System Strengthening in Yemen", desc:"Improving health facilities and service delivery across 12 underserved governorates.", category:"Health Systems",        image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" },
-  { id:2, title:"Disease Surveillance Enhancement",     desc:"Building national capacities for early detection and response to infectious diseases.",  category:"Research & Studies",   image:"https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=600&q=80" },
-  { id:3, title:"Community Health Empowerment",         desc:"Engaging communities through participatory health promotion and education programs.",    category:"Training & Capacity", image:"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80" },
-  { id:4, title:"Humanitarian Health Response",         desc:"Providing life-saving support to vulnerable populations in conflict-affected areas.",    category:"Emergency Response",  image:"https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600&q=80" },
+  { id:1, title:"WHO Health Surveys",                   desc:"Field implementation, validation systems, and decision-ready reporting for health program planning.", category:"Health Systems",        image:"https://images.pexels.com/photos/14927253/pexels-photo-14927253.jpeg" },
+  { id:2, title:"UNICEF Monitoring Projects",           desc:"Monitoring frameworks and verification workflows for child and community health initiatives.",  category:"Monitoring",   image:"https://images.pexels.com/photos/37234314/pexels-photo-37234314.jpeg" },
+  { id:3, title:"Polio Campaign Coverage Surveys",      desc:"Coverage assessment and field monitoring to evaluate campaign reach and improve intervention quality.",    category:"Training & Capacity", image:"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80" },
+  { id:4, title:"Public Health Assessments",            desc:"Needs assessments, service analysis, and evidence synthesis to guide strategic health planning.",    category:"Emergency Response",  image:"https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600&q=80" },
   { id:5, title:"Nutrition Assessment Study",           desc:"Assessing nutritional status and food security across four rural governorates.",          category:"Research & Studies",  image:"https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&q=80" },
 ];
 
