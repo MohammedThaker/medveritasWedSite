@@ -1199,7 +1199,7 @@ const Footer: FC = memo(() => {
   }, [handleSubscribe]);
 
   return (
-    <footer role="contentinfo" style={{ background: `linear-gradient(160deg, ${T.navy} 0%, #0a1628 60%, #0e2235 100%)`, padding: "clamp(3rem,6vw,5rem) clamp(1.25rem,4vw,2.5rem) 0", position: "relative", overflow: "hidden" }}>
+    <footer role="contentinfo" style={{ background: `linear-gradient(160deg, ${T.navy} 0%, #0a1628 60%, #0e2235 100%)`, padding: "clamp(3rem,6vw,5rem) clamp(1.25rem,4vw,2.5rem) 0", position: "relative" }}>
       <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: "60%", height: 1, background: `linear-gradient(90deg, transparent, ${T.cyan}40, transparent)` }} aria-hidden="true" />
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
