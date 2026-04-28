@@ -1,6 +1,6 @@
 
 import './App.css'
-import MedVeritasWed from "./medveritaslast4";
+import MedVeritasWed from "./MedVeritasHome";
 function App() {
   return <MedVeritasWed />;
 }
