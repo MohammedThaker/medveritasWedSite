@@ -1,12 +1,3 @@
-/**
- * MedVeritas — Premium Healthcare Homepage v2.0
- * Stack: React + TypeScript + framer-motion
- * Install: npm install framer-motion
- *          npm install -D @types/react @types/react-dom
- *
- * Design direction: "Clinical Precision meets Human Warmth"
- */
-
 import {
   useState,
   useEffect,
@@ -197,7 +188,7 @@ const GlobalStyles: FC = memo(() => {
         .mv-desktop-cta { display:none !important; }
         .mv-hamburger { display:flex !important; }
       }
-
+      
       .mv-hero-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(2rem,5vw,5rem); align-items:center; }
       .mv-services-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
       .mv-why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
@@ -326,14 +317,16 @@ const Btn: FC<BtnProps> = memo(({ children, variant = "primary", href = "#", sty
 
   const variantStyles: Record<string, React.CSSProperties> = {
     primary: {
-      background: `linear-gradient(135deg, ${T.cyan} 0%, ${T.green} 100%)`,
+      background: "#29aae1",
       color: "#fff", border: "none",
       boxShadow: `0 6px 20px rgba(41,170,225,.38)`,
+      borderRadius:"6px"
     },
     secondary: {
       background: "rgba(255,255,255,.09)",
       color: "#fff", border: "1.5px solid rgba(255,255,255,.22)",
       backdropFilter: "blur(10px)",
+       borderRadius:"6px"
     },
     outline: {
       background: "transparent",
@@ -616,7 +609,7 @@ const Navbar: FC = memo(() => {
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
           height: 68, display: "flex", alignItems: "center",
           padding: "0 clamp(1.25rem, 4vw, 2.5rem)",
-          background: scrolled ? "rgba(255,255,255,.97)" : "rgba(255,255,255,.9)",
+          background:scrolled ? "rgba(255,255,255,.97)" : "rgb(13, 27, 62)",
           backdropFilter: "blur(24px) saturate(180%)",
           borderBottom: scrolled ? `1px solid ${T.border}` : "1px solid transparent",
           boxShadow: scrolled ? T.sm : "none",
@@ -630,7 +623,7 @@ const Navbar: FC = memo(() => {
               <path d="M8 8L20 20L8 32" stroke={T.green} strokeWidth="3.5" strokeLinecap="round"/>
               <path d="M20 8L32 20L20 32" stroke={T.cyan} strokeWidth="3.5" strokeLinecap="round"/>
             </svg>
-            <span style={{ fontFamily: T.display, fontWeight: 800, fontSize: "1.2rem", color: T.navy, letterSpacing: "-.025em" }}>
+            <span style={{ fontFamily: T.display, fontWeight: 800, fontSize: "1.2rem", color: T.green, letterSpacing: "-.025em" }}>
               Med<span style={{ color: T.cyan }}>Veritas</span>
             </span>
           </a>
@@ -753,10 +746,10 @@ const Hero: FC = memo(() => {
   return (
     <section
       aria-labelledby="hero-heading"
-      style={{ position: "relative", paddingTop: 68, minHeight: "100svh", display: "flex", alignItems: "center", overflow: "hidden", background: T.navy }}>
+      style={{ position: "relative", paddingTop: 68, minHeight: "100svh", display: "flex", alignItems: "center", overflow: "hidden", background:"linear-gradient(309deg, rgb(41, 170, 225), rgb(11, 34, 57)"}}>
 
       {/* Background layers */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+      {/* <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <img
           src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=80"
           alt=""
@@ -778,23 +771,23 @@ const Hero: FC = memo(() => {
             <div style={{ position: "absolute", bottom: "8%", left: "4%", width: 400, height: 400, borderRadius: "50%", background: `radial-gradient(circle, rgba(91,187,107,.07) 0%, transparent 68%)`, animation: "float 12s ease-in-out infinite reverse" }} />
           </>
         )}
-      </div>
+      </div> */}
 
       <div style={{ position: "relative", zIndex: 1, maxWidth: 1280, margin: "0 auto", width: "100%", padding: "clamp(3rem,8vh,6rem) clamp(1.25rem,4vw,2.5rem)" }} className="mv-hero-grid">
         {/* Left */}
-        <div>
+        <div id="hero-front">
           <motion.div
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .1, duration: shouldReduce ? .2 : .65, ease: T.ease }}
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "5px 14px 5px 8px", background: "rgba(41,170,225,.1)", border: "1px solid rgba(41,170,225,.22)", borderRadius: T.full, marginBottom: 24 }}>
+            style={{ display: "flex", textAlign:"left", alignItems: "left", gap: 8, padding: "5px 14px 5px 8px", background: "rgba(41,170,225,.1)", border: "1px solid rgba(41,170,225,.22)", borderRadius: T.full, marginBottom: 24 }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: T.cyan, animation: "pulse 2.2s ease-in-out infinite" }} aria-hidden="true" />
-            <span style={{ fontSize: ".7rem", fontWeight: 700, letterSpacing: ".09em", textTransform: "uppercase", color: T.cyan }}>Evidence. Insight. Impact.</span>
+            <span style={{ fontSize: ".7rem", fontWeight: 700, letterSpacing: ".09em", textTransform: "uppercase", color: T.cyan }}>Yemen's Leading Health Research Partner.</span>
           </motion.div>
 
           <motion.h1 id="hero-heading"
             initial={{ opacity: 0, y: shouldReduce ? 0 : 28 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .2, duration: shouldReduce ? .2 : .75, ease: T.ease }}
-            style={{ fontFamily: T.display, fontSize: "clamp(2.4rem, 5vw, 3.9rem)", fontWeight: 800, color: "#fff", lineHeight: 1.08, letterSpacing: "-.032em", marginBottom: 24 }}>
+            style={{fontSize: "clamp(2.4rem, 5vw, 3.9rem)", textAlign:"left", fontWeight: 800, color: "#fff", lineHeight: 1.08, letterSpacing: "-.032em", marginBottom: 24 }}>
             Data-driven solutions<br />for{" "}
             <span style={{ background: `linear-gradient(125deg, ${T.green} 0%, ${T.cyan} 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               healthier communities
@@ -804,7 +797,7 @@ const Hero: FC = memo(() => {
           <motion.p
             initial={{ opacity: 0, y: shouldReduce ? 0 : 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .3, duration: shouldReduce ? .2 : .65, ease: T.ease }}
-            style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,.62)", lineHeight: 1.75, maxWidth: 500, marginBottom: 36 }}>
+            style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,.62)", textAlign:"left", lineHeight: 1.75, maxWidth: 500, marginBottom: 36 }}>
             MedVeritas is a health research and consulting firm generating evidence, strengthening systems, and improving lives in Yemen and beyond.
           </motion.p>
 
@@ -812,7 +805,7 @@ const Hero: FC = memo(() => {
             initial={{ opacity: 0, y: shouldReduce ? 0 : 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .4, duration: shouldReduce ? .2 : .6, ease: T.ease }}
             style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 48 }}>
-            <Btn href="#services">Explore Our Services <IconArrow size={15} /></Btn>
+            <Btn href="#services" >Explore Our Services <IconArrow size={15} /></Btn>
             <Btn href="#about" variant="secondary">Learn More About Us</Btn>
           </motion.div>
 
@@ -872,7 +865,7 @@ const TrustedBy: FC = memo(() => {
   const items = useMemo(() => [...PARTNERS, ...PARTNERS], []);
 
   return (
-    <section aria-label="Our partners" style={{ background: "#fff", padding: "clamp(2rem,4vw,3.5rem) 0", borderBottom: `1px solid ${T.border}`, overflow: "hidden" }}>
+    <section aria-label="Our partners" style={{ background: "#fff", padding: "clamp(4rem,4vw,2.5rem) 0", borderBottom: `1px solid ${T.border}`, overflow: "hidden" }}>
       <Reveal>
         <p style={{ textAlign: "center", fontSize: ".6875rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: T.muted, marginBottom: 28 }}>
           Trusted by partners who share our mission
