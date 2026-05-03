@@ -746,7 +746,7 @@ const Hero: FC = memo(() => {
   return (
     <section
       aria-labelledby="hero-heading"
-      style={{ position: "relative", paddingTop: 68, minHeight: "100svh", display: "flex", alignItems: "center", overflow: "hidden", background:"linear-gradient(309deg, rgb(41, 170, 225), rgb(11, 34, 57)"}}>
+      style={{ position: "relative", paddingTop: 68, minHeight: "100svh", display: "flex", alignItems: "center", overflow: "hidden", background:"rgb(13, 27, 62)"}}>
 
       {/* Background layers */}
       {/* <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
