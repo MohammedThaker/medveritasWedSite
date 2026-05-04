@@ -25,6 +25,7 @@ import {
 ═══════════════════════════════════════════ */
 const T = {
   cyan:       "#29AAE1",
+  cyanblack:       "#02080b",
   cyanDark:   "#1a8bbf",
   cyanLight:  "rgba(41,170,225,.12)",
   green:      "#5BBB6B",
@@ -609,7 +610,7 @@ const Navbar: FC = memo(() => {
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
           height: 68, display: "flex", alignItems: "center",
           padding: "0 clamp(1.25rem, 4vw, 2.5rem)",
-          background:scrolled ? "rgba(255,255,255,.97)" : "rgb(13, 27, 62)",
+          background:scrolled ? "rgba(255,255,255,.97)" : "rgba(255,255,255,.82)",
           backdropFilter: "blur(24px) saturate(180%)",
           borderBottom: scrolled ? `1px solid ${T.border}` : "1px solid transparent",
           boxShadow: scrolled ? T.sm : "none",
@@ -619,12 +620,13 @@ const Navbar: FC = memo(() => {
         <div style={{ maxWidth: 1280, margin: "0 auto", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
           {/* Logo */}
           <a href="#" aria-label="MedVeritas home" style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
-            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <path d="M8 8L20 20L8 32" stroke={T.green} strokeWidth="3.5" strokeLinecap="round"/>
-              <path d="M20 8L32 20L20 32" stroke={T.cyan} strokeWidth="3.5" strokeLinecap="round"/>
+            <svg width="39px" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M2 34 L10 6 L18 22 L22 14" stroke={T.green} strokeWidth="5.5" strokeLinecap="round" fill="none"/>
+              <path d="M22 14 L26 22 L34 6" stroke={T.green} strokeWidth="5.5" strokeLinecap="round" fill="none"/>
+              <path d="M28 20 L33 27 L42 10" stroke={T.cyan} strokeWidth="4.5" strokeLinecap="round"  fill="none"/>
             </svg>
-            <span style={{ fontFamily: T.display, fontWeight: 800, fontSize: "1.2rem", color: T.green, letterSpacing: "-.025em" }}>
-              Med<span style={{ color: T.cyan }}>Veritas</span>
+            <span style={{ fontFamily: T.display, fontWeight: 700, fontSize: "1.45rem", color: T.green, letterSpacing: "-0.01em" }}>
+              Med<span style={{ color: T.cyan }}>V</span><span style={{ color: T.cyanblack }}>eritas</span>
             </span>
           </a>
 
@@ -1199,13 +1201,16 @@ const Footer: FC = memo(() => {
         <div className="mv-footer-grid" style={{ paddingBottom: "clamp(2.5rem,5vw,4rem)", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
           {/* Brand */}
           <div>
-            <a href="#" aria-label="MedVeritas home" style={{ display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-              <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <path d="M8 8L20 20L8 32" stroke={T.green} strokeWidth="3.5" strokeLinecap="round"/>
-                <path d="M20 8L32 20L20 32" stroke={T.cyan} strokeWidth="3.5" strokeLinecap="round"/>
-              </svg>
-              <span style={{ fontFamily: T.display, fontWeight: 800, fontSize: "1.1rem", color: "#fff" }}>Med<span style={{ color: T.cyan }}>Veritas</span></span>
-            </a>
+            <a href="#" aria-label="MedVeritas home" style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M2 34 L10 6 L18 22 L22 14" stroke={T.green} strokeWidth="5.5" strokeLinecap="round" fill="none"/>
+              <path d="M22 14 L26 22 L34 6" stroke={T.green} strokeWidth="5.5" strokeLinecap="round" fill="none"/>
+              <path d="M28 20 L33 27 L42 10" stroke={T.cyan} strokeWidth="4.5" strokeLinecap="round"  fill="none"/>
+            </svg>
+            <span style={{ fontFamily: T.display, fontWeight: 700, fontSize: "1.45rem", color: T.green, letterSpacing: "-0.01em" }}>
+              Med<span style={{ color: T.cyan }}>V</span><span style={{ color: T.cyanblack }}>eritas</span>
+            </span>
+          </a>
             <p style={{ fontSize: ".84rem", color: "rgba(255,255,255,.38)", lineHeight: 1.75, marginBottom: 24, maxWidth: 250 }}>
               Data-driven healthcare solutions for a healthier Yemen and beyond.
             </p>
